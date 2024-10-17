@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="flex flex-col min-h-screen bg-primary min-w-screen">
         <Header />
-        <div className="flex-grow">hi</div>
+        <div className="flex-grow bg-white rounded-t-xl p-4">hi</div>
         <NavigationBar />
       </div>
     </>
