@@ -9,10 +9,10 @@ function ItemCard({ product }) {
   } = product;
 
   return (
-    <div className="w-[183px] h-[250px] md:h-[272px] md:w-[220px]  rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
+    <div className="w-[183px] h-[250px] md:h-[272px] md:w-[220px] xl:h-[310px] xl:w-[248px]   rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
       <div className="relative">
         {/* Product Image */}
-        <div className="h-[120px] md:h-[140px] bg-gray-300">
+        <div className="h-[120px] md:h-[140px] xl:h-[160px] bg-gray-300">
           {product_image && (
             <img
               src={product_image}
@@ -43,11 +43,11 @@ function ItemCard({ product }) {
         </div>
         <div className="flex flex-col">
           {/* Product name */}
-          <p className="text-sm font-bold flex-grow ">
+          <p className="text-sm xl:text-lg line-clamp-1 font-bold flex-grow ">
             {product_name || "Product Name"}
           </p>
           {/* Product Title */}
-          <p className="text-xs line-clamp-2 font-medium h-[30px] flex-grow text-gray-500">
+          <p className="text-xs xl:text-sm line-clamp-2 font-medium h-[30px] flex-grow text-gray-500">
             {title || "Product title"}
           </p>
         </div>
