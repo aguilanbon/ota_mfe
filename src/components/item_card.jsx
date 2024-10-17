@@ -35,7 +35,7 @@ function ItemCard({ product }) {
           {/* Brand Name*/}
           {brand_name && (
             <div className="flex items-end truncate">
-              <h3 className="text-xs text-right font-semibold">
+              <h3 className="text-xs text-right font-semibold text-gray-500 underline">
                 {brand_name || "Brand Name"}
               </h3>
             </div>
@@ -47,7 +47,7 @@ function ItemCard({ product }) {
             {product_name || "Product Name"}
           </p>
           {/* Product Title */}
-          <p className="text-xs xl:text-sm line-clamp-2 font-medium h-[30px] flex-grow text-gray-500">
+          <p className="text-xs xl:text-sm line-clamp-2 font-medium h-[30px] xl:h-[38px] flex-grow text-gray-500">
             {title || "Product title"}
           </p>
         </div>
