@@ -9,10 +9,10 @@ function ItemCard({ product }) {
   } = product;
 
   return (
-    <div className="w-[183px] h-[240px] rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
+    <div className="w-[183px] h-[240px] md:h-[272px] md:w-[220px]  rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
       <div className="relative">
         {/* Product Image */}
-        <div className="h-[120px] bg-gray-300">
+        <div className="h-[120px] md:h-[140px] bg-gray-300">
           {product_image && (
             <img
               src={product_image}
@@ -34,7 +34,7 @@ function ItemCard({ product }) {
     {product_name || "Product Name"}
   </h3> */}
         {/* Product Title */}
-        <p className="text-sm line-clamp-2 font-bold flex-grow">
+        <p className="text-sm line-clamp-2 font-bold flex-grow h-[44px]">
           {title || "Product title"}
         </p>
         {/* Progress Bar */}

@@ -56,6 +56,9 @@ function HomeView() {
       {products.features?.length > 0 && (
         <LaneComponent laneLabel="Featured" itemList={products.features} />
       )}
+      {products.null?.length > 0 && (
+        <LaneComponent laneLabel="" itemList={products.null} />
+      )}
     </div>
   );
 }
