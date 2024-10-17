@@ -9,7 +9,7 @@ function ItemCard({ product }) {
   } = product;
 
   return (
-    <div className="w-[183px] h-[240px] md:h-[272px] md:w-[220px]  rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
+    <div className="w-[183px] h-[250px] md:h-[272px] md:w-[220px]  rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
       <div className="relative">
         {/* Product Image */}
         <div className="h-[120px] md:h-[140px] bg-gray-300">
@@ -23,20 +23,34 @@ function ItemCard({ product }) {
         </div>
       </div>
       <div className="flex flex-col flex-grow p-2 space-y-2">
-        {/* Brand Logo */}
-        {brand_image && (
-          <div className="w-44 flex-grow">
-            <img src={brand_image} alt={brand_name} className="h-4 w-auto" />
-          </div>
-        )}
-        {/* Product Name */}
-        {/* <h3 className="font-medium text-md truncate flex-grow">
-    {product_name || "Product Name"}
-  </h3> */}
-        {/* Product Title */}
-        <p className="text-sm line-clamp-2 font-bold flex-grow h-[44px]">
-          {title || "Product title"}
-        </p>
+        <div className="w-full flex flex-row content-between justify-between space-x-4">
+          {/* Brand Logo */}
+          {brand_image && (
+            <img
+              src={brand_image}
+              alt={brand_name}
+              className="h-4 rounded-sm"
+            />
+          )}
+          {/* Brand Name*/}
+          {brand_name && (
+            <div className="flex items-end truncate">
+              <h3 className="text-xs text-right font-semibold">
+                {brand_name || "Brand Name"}
+              </h3>
+            </div>
+          )}
+        </div>
+        <div className="flex flex-col">
+          {/* Product name */}
+          <p className="text-sm font-bold flex-grow ">
+            {product_name || "Product Name"}
+          </p>
+          {/* Product Title */}
+          <p className="text-xs line-clamp-2 font-medium h-[30px] flex-grow text-gray-500">
+            {title || "Product title"}
+          </p>
+        </div>
         {/* Progress Bar */}
         {progress > 0 && (
           <div className="flex flex-grow">
