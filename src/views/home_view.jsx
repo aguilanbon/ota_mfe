@@ -17,8 +17,6 @@ function HomeView() {
         // Group products by lane
         const groupedProducts = jsonData.reduce((acc, product) => {
           const lane = product.lane;
-          console.log(lane);
-
           if (!acc[lane]) {
             acc[lane] = [];
           }
@@ -49,9 +47,15 @@ function HomeView() {
 
   return (
     <div className="flex flex-col w-full h-full">
-      <LaneComponent laneLabel={"For You"} />
-      <LaneComponent laneLabel={"Hot Products"} />
-      <LaneComponent laneLabel={"Featured"} />
+      {products.for_you?.length > 0 && (
+        <LaneComponent laneLabel="For You" itemList={products.for_you} />
+      )}
+      {products.hot?.length > 0 && (
+        <LaneComponent laneLabel="Hot Products" itemList={products.hot} />
+      )}
+      {products.features?.length > 0 && (
+        <LaneComponent laneLabel="Featured" itemList={products.features} />
+      )}
     </div>
   );
 }
