@@ -1,5 +1,5 @@
 function NavigationBar() {
-  return <div>NavigationBar</div>;
+  return <div className="">NavigationBar</div>;
 }
 
 export default NavigationBar;

@@ -5,9 +5,9 @@ import NavigationBar from "./components/navigation_bar";
 function App() {
   return (
     <>
-      <div>
+      <div className="flex flex-col min-h-screen">
         <Header />
-        <p className="font-bold text-green-400">MFE Test</p>
+        <div className="flex-grow">hi</div>
         <NavigationBar />
       </div>
     </>
