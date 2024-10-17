@@ -2,11 +2,58 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/header";
 import NavigationBar from "./components/navigation_bar";
+import ItemCard from "./components/item_card";
 
-// View components
 const HomeView = () => (
-  <div className="flex flex-grow flex-col items-start justify-start self-start h-full">
-    <h2 className="text-2xl font-bold text-gray-800">Home View</h2>
+  <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col space-y-6 pb-6">
+      <div className="flex flex-row justify-between items-baseline">
+        <h2 className="text-xl font-bold text-gray-800">For You</h2>
+        <p className="text-xs text-primary">See all</p>
+      </div>
+      <div className="w-full overflow-x-auto pb-4">
+        <div className="flex flex-row space-x-4 min-w-min">
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </div>
+      </div>
+    </div>
+    <div className="flex flex-col space-y-6 pb-6">
+      <div className="flex flex-row justify-between items-baseline">
+        <h2 className="text-xl font-bold text-gray-800">Hot Products</h2>
+        <p className="text-xs text-primary">See all</p>
+      </div>
+      <div className="w-full overflow-x-auto pb-4">
+        <div className="flex flex-row space-x-4 min-w-min">
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </div>
+      </div>
+    </div>
+    <div className="flex flex-col space-y-6 pb-6">
+      <div className="flex flex-row justify-between items-baseline">
+        <h2 className="text-xl font-bold text-gray-800">Featured</h2>
+        <p className="text-xs text-primary">See all</p>
+      </div>
+      <div className="w-full overflow-x-auto pb-4">
+        <div className="flex flex-row space-x-4 min-w-min">
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+          <ItemCard />
+        </div>
+      </div>
+    </div>
   </div>
 );
 
@@ -43,18 +90,16 @@ function App() {
   };
 
   return (
-    <>
-      <div className="flex flex-col min-h-screen bg-primary min-w-screen">
-        <Header />
-        <div className="flex flex-grow items-center justify-center bg-offWhite rounded-t-xl p-6">
-          {renderView()}
-        </div>
-        <NavigationBar
-          currentView={currentView}
-          setCurrentView={setCurrentView}
-        />
+    <div className="flex flex-col h-screen bg-primary min-w-screen">
+      <Header />
+      <div className="flex flex-1 items-center justify-center bg-offWhite rounded-t-xl p-6 overflow-y-auto">
+        {renderView()}
       </div>
-    </>
+      <NavigationBar
+        currentView={currentView}
+        setCurrentView={setCurrentView}
+      />
+    </div>
   );
 }
 
