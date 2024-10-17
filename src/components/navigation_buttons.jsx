@@ -6,7 +6,9 @@ function NavigationButton({ icon, label, isActive, onClick }) {
       }`}
       onClick={onClick}
     >
-      <button className="">{icon}</button>
+      <button className="" aria-label={`${label} Navigation Button`}>
+        {icon}
+      </button>
       <span className="text-xs">{label}</span>
     </div>
   );

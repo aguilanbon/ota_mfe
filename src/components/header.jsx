@@ -6,11 +6,12 @@ function Header() {
   return (
     <div className="flex flex-col justify-center h-[94px] text-white">
       <div className="h-[46px] flex flex-row justify-start items-center">
-        <div className="w-12 h-12 bg-orange-200 mx-4 rounded-full flex items-center justify-center">
+        <div className="w-12 h-12 bg-orange-200 ml-4 mr-2 rounded-full flex items-center justify-center">
           {!profileImageError ? (
             <img
               src="https://picsum.photos/200/300"
               className="w-full h-full object-cover rounded-full"
+              alt="Profile Image"
               onError={() => setProfileImageError(true)}
             />
           ) : (
