@@ -7,7 +7,9 @@ function LaneComponent({ laneLabel, itemList }) {
   return (
     <div className="flex flex-col space-y-1">
       <div className="flex flex-row justify-between items-baseline">
-        <h2 className="text-xl font-bold text-gray-800">{laneLabel}</h2>
+        <h2 className="text-xl font-bold text-gray-800">
+          {laneLabel !== "null" && laneLabel !== "Null" ? laneLabel : ""}
+        </h2>
         <button className="text-xs text-primary hover:text-primary/80">
           See all
         </button>

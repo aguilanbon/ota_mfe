@@ -45,19 +45,23 @@ function HomeView() {
     return <ErrorView message={error} />;
   }
 
+  const formatLabel = (label) => {
+    return label
+      .replace(/_/g, " ") // Replace underscores with spaces
+      .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize the first letter of each word
+  };
+
   return (
     <div className="flex flex-col w-full h-full space-y-3">
-      {products.for_you?.length > 0 && (
-        <LaneComponent laneLabel="For You" itemList={products.for_you} />
-      )}
-      {products.hot?.length > 0 && (
-        <LaneComponent laneLabel="Hot Products" itemList={products.hot} />
-      )}
-      {products.features?.length > 0 && (
-        <LaneComponent laneLabel="Featured" itemList={products.features} />
-      )}
-      {products.null?.length > 0 && (
-        <LaneComponent laneLabel="" itemList={products.null} />
+      {Object.keys(products).map(
+        (lane) =>
+          products[lane]?.length > 0 && (
+            <LaneComponent
+              key={lane}
+              laneLabel={formatLabel(products[lane][0].lane || lane)}
+              itemList={products[lane]}
+            />
+          )
       )}
     </div>
   );
