@@ -5,20 +5,24 @@ import NavigationBar from "./components/navigation_bar";
 
 // View components
 const HomeView = () => (
-  <div className="flex items-center justify-center h-full">
+  <div className="flex flex-grow flex-col items-start justify-start self-start h-full">
     <h2 className="text-2xl font-bold text-gray-800">Home View</h2>
   </div>
 );
 
 const CouponsView = () => (
-  <div className="flex items-center justify-center h-full">
-    <h2 className="text-2xl font-bold text-gray-800">My Coupons View</h2>
+  <div className="flex flex-col items-center justify-center h-full">
+    <h2 className="text-lg font-bold text-gray-800 align-middle">
+      Coming soon...
+    </h2>
   </div>
 );
 
 const ProfileView = () => (
   <div className="flex items-center justify-center h-full">
-    <h2 className="text-2xl font-bold text-gray-800">Profile View</h2>
+    <h2 className="text-lg font-bold text-gray-800 align-middle">
+      Coming soon...
+    </h2>
   </div>
 );
 
@@ -42,7 +46,7 @@ function App() {
     <>
       <div className="flex flex-col min-h-screen bg-primary min-w-screen">
         <Header />
-        <div className="flex-grow bg-offWhite rounded-t-xl p-4">
+        <div className="flex flex-grow items-center justify-center bg-offWhite rounded-t-xl p-6">
           {renderView()}
         </div>
         <NavigationBar
