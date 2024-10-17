@@ -4,7 +4,7 @@ import { GoHome, GoHomeFill, GoPerson, GoPersonFill } from "react-icons/go";
 
 function NavigationBar({ currentView, setCurrentView }) {
   return (
-    <div className="h-[60px] bg-white flex w-full justify-around text-primary">
+    <div className="h-[60px] bg-white flex justify-around text-primary border-t-2 border-solid border-gray-100 shadow-sm">
       <NavigationButton
         icon={
           currentView === "home" ? (

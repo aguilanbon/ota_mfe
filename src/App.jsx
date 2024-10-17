@@ -42,7 +42,7 @@ function App() {
     <>
       <div className="flex flex-col min-h-screen bg-primary min-w-screen">
         <Header />
-        <div className="flex-grow bg-white rounded-t-xl p-4">
+        <div className="flex-grow bg-offWhite rounded-t-xl p-4">
           {renderView()}
         </div>
         <NavigationBar
