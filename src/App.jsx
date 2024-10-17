@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-primary min-w-screen">
+    <div className="flex flex-col h-screen bg-primary min-w-screen font-redHat">
       <Header />
       <div className="flex flex-1 items-center justify-center bg-offWhite rounded-t-xl p-6 overflow-y-auto">
         {renderView()}

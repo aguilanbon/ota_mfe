@@ -46,7 +46,7 @@ function HomeView() {
   }
 
   return (
-    <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col w-full h-full space-y-4">
       {products.for_you?.length > 0 && (
         <LaneComponent laneLabel="For You" itemList={products.for_you} />
       )}

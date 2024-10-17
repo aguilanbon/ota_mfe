@@ -7,6 +7,9 @@ export default {
         primary: "#7130D5",
         offWhite: "#FCFCFC",
       },
+      fontFamily: {
+        redHat: ["Red Hat Display", "sans-serif"],
+      },
     },
   },
   plugins: [],
