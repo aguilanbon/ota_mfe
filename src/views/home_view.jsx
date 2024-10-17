@@ -51,9 +51,18 @@ function HomeView() {
       .replace(/\b\w/g, (char) => char.toUpperCase()); // Capitalize the first letter of each word
   };
 
+  const sortedKeys = [
+    "for_you",
+    "hot",
+    "features",
+    ...Object.keys(products).filter(
+      (key) => !["for_you", "hot", "features"].includes(key)
+    ),
+  ];
+
   return (
     <div className="flex flex-col w-full h-full space-y-3">
-      {Object.keys(products).map(
+      {sortedKeys.map(
         (lane) =>
           products[lane]?.length > 0 && (
             <LaneComponent

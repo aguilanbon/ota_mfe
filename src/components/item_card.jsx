@@ -68,9 +68,9 @@ function ItemCard({ product }) {
         {/* Progress Bar */}
         {progress > 0 && (
           <div className="flex flex-grow">
-            <div className="w-full bg-gray-200 rounded-full h-1.5 ">
+            <div className="w-full bg-gray-200 rounded-sm h-1.5 ">
               <div
-                className="bg-primary h-1.5 rounded-full"
+                className="bg-primary h-1.5 rounded-sm"
                 style={{ width: `${progress * 100}%` }}
               />
             </div>
