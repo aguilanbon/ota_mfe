@@ -9,7 +9,7 @@ function ItemCard({ product }) {
   } = product;
 
   return (
-    <div className="w-[183px] h-[240px] rounded-xl shadow-md bg-white flex flex-col overflow-hidden">
+    <div className="w-[183px] h-[240px] rounded-xl shadow-md bg-white flex flex-col overflow-hidden cursor-pointer hover:shadow-lg transform transition-transform hover:-translate-y-2">
       <div className="relative">
         {/* Product Image */}
         <div className="h-[120px] bg-gray-300">

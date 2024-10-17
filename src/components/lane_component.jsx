@@ -12,7 +12,7 @@ function LaneComponent({ laneLabel, itemList }) {
           See all
         </button>
       </div>
-      <div className="w-full overflow-x-auto pb-4">
+      <div className="w-full overflow-x-auto py-2">
         <div className="flex flex-row space-x-4 min-w-min">
           {itemList.map((product, index) => (
             <ItemCard
