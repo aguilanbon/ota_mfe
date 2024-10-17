@@ -2,7 +2,7 @@ function NavigationButton({ icon, label, isActive, onClick }) {
   return (
     <div
       className={`flex flex-col items-center cursor-pointer transition-colors ${
-        isActive ? "text-blue-600" : "text-primary hover:text-blue-400"
+        isActive ? "hover:text-primary" : "hover:text-gray-300"
       }`}
       onClick={onClick}
     >
