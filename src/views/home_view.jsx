@@ -72,6 +72,7 @@ function HomeView() {
             />
           )
       )}
+      <div className="pb-6"></div>
     </div>
   );
 }
