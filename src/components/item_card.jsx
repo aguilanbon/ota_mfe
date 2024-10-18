@@ -21,6 +21,7 @@ function ItemCard({ product }) {
         <div className="h-[120px] md:h-[140px] xl:h-[160px] bg-gray-300">
           {product_image && !productImageError ? (
             <img
+              loading="lazy"
               src={product_image}
               alt={product_name}
               className="w-full h-full object-cover"
@@ -38,9 +39,10 @@ function ItemCard({ product }) {
           {/* Brand Logo */}
           {brand_image && !brandImageError ? (
             <img
+              loading="lazy"
               src={brand_image}
               alt={brand_name}
-              className="h-4 rounded-sm"
+              className="h-4 rounded-sm object-contain"
               onError={() => setBrandImageError(true)}
             />
           ) : (
